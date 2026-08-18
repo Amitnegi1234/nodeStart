@@ -1,11 +1,9 @@
-const express=require('express');
+const express=require('express')
+const cartController=require('../controllers/cartController')
 const router=express.Router();
 
-router.get('/',(req,res)=>{
-    res.send('user list')
-})
-router.post('/',(req,res)=>{
-    res.send('user created')
-})
+router.get('/',cartController.getUsers)
+router.post('/',cartController.addUser)
+router.get('/:id',cartController.getUserById)
 
 module.exports=router

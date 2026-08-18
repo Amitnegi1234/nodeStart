@@ -1,9 +1,9 @@
 const express=require('express')
-const cartController=require('../controllers/cartController')
+const userController=require('../controllers/userController')
 const router=express.Router();
 
-router.get('/',cartController.getUsers)
-router.post('/',cartController.addUser)
-router.get('/:id',cartController.getUserById)
+router.get('/',userController.getUsers)
+router.post('/',userController.addUser)
+router.get('/:id',userController.getUserById)
 
 module.exports=router
